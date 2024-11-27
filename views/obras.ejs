@@ -1,0 +1,10 @@
+<%- include("header.ejs") %>
+<div>
+    <% obras.forEach(obra => { %>
+        <h1>ID Tren: <%= obra.id %></h1>
+        <p>Nombre: <%= obra.nombre %></p>
+        <p>Capacidad: <%= obra.anioDeCreacion %></p>
+        <p>Tipo: <%= obra.tipo %></p>
+        <img src="/public/img/<%=obra.imagen%>">
+    <% }); %>
+</div>
