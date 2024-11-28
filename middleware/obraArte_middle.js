@@ -23,7 +23,7 @@ const middle_PUT = function (req, res, next) {
 };
 
 const comprobarID = function (req, res, next) {
-    const id = req.params.id;
+    const id = Number(req.params.id);
     if (typeof id !== "number") {
         res.status(401).send("Error en los datos enviados");
     } else {
