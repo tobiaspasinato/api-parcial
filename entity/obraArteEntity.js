@@ -31,6 +31,7 @@ const ObraDeArte = sequelize.define("ObraDeArte", {
 },{
     timestamps: true,
     createdAt: "creado_en",
-});
+},
+);
 
 module.exports = ObraDeArte;

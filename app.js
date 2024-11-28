@@ -15,17 +15,22 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (request, response) => {
-    response.render("header");
+    response.render("home");
 });
 
 const obraArteRoutes = require('./routes/obras.routes.js');
 app.use('/obras', obraArteRoutes);
 
+const logRoutes = require('./routes/log.routes.js');
+app.use('/logs', logRoutes);
+
 /*
 const obraArte = require('./entity/obraArteEntity.js');
+const logSequelize = require('./entity/logEntity.js');
 
 app.get('/createBD', async (request, response) => {
     await obraArte.sync({ force: true });
+    await logSequelize.sync({ force: true });
     console.log("Tabla creada");
     response.send("Tabla creada");
 });

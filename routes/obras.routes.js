@@ -28,7 +28,7 @@ router.post('/create', upload.single("obra"), middle_POST, async (request, respo
     }
 });
 
-router.get('/list', async (request, response) => {
+router.get('/', async (request, response) => {
     const obras = await ObraDeArte.findAll(
         {
             where: { activo: true },

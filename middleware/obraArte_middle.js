@@ -1,6 +1,7 @@
 const middle_POST = function (req, res, next) {
     const nombre = req.body.nombre;
-    const anioDeCreacion = req.body.anioDeCreacion;
+    //const anioDeCreacion = req.body.anioDeCreacion; linea original (el problema era que el postman lo manda como string)
+    const anioDeCreacion = Number(req.body.anioDeCreacion); //Lo acabo de cambiar
     const tipo = req.body.tipo;
     if (typeof nombre !== "string" || !Number.isInteger(anioDeCreacion) || (tipo !== "pintura" && tipo !== "escultura")) {
         res.status(401).send("Error en los datos enviados");

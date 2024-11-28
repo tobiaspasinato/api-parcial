@@ -1,0 +1,8 @@
+<%- include("header.ejs") %>
+<div>
+    <% logs.forEach(log => { %>
+        <h1>ID Log: <%= log.id %></h1>
+        <p>Ruta: <%= log.ruta %></p>
+        <p>Metodo: <%= log.metodo %></p>
+    <% }); %>
+</div>
