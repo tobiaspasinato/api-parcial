@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>autitos ejs</title>
+        <link rel="stylesheet" href="../public/stylesheets/styles.css">
+    </head>
+    <body>
+        <h2>Lista Autos:</h2>
+        <% array.forEach((auto) => { %>
+            <h1>Nombre:<%= auto.nombre %></h1>
+            <h2>Patente: <%= auto.patente %></h2>
+        <% }) %>
+    </body>
+</html>

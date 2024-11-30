@@ -1,0 +1,9 @@
+<%- include("header.ejs") %>
+<div>
+    <% estaciones.forEach(e => { %>
+        <h1>ID Estacion: <%= e.id %></h1>
+        <p>Nombre: <%= e.nombre %></p>
+        <p>Precio Entrada: <%= e.precioEntrada %></p>
+        <img src="<%= '/relaciones/estaciones/' + e.foto %>">
+    <%}); %>
+</div>
