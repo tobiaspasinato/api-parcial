@@ -24,17 +24,16 @@ app.use('/obras', obraArteRoutes);
 const logRoutes = require('./routes/log.routes.js');
 app.use('/logs', logRoutes);
 
-/*
+
 const obraArte = require('./entity/obraArteEntity.js');
 const logSequelize = require('./entity/logEntity.js');
 
 app.get('/createBD', async (request, response) => {
     await obraArte.sync({ force: true });
-    await logSequelize.sync({ force: true });
     console.log("Tabla creada");
     response.send("Tabla creada");
 });
-*/
+
 
 app.listen(process.env.PORT, () => {
     console.log("Servidor iniciado en el puerto " + process.env.PORT);
