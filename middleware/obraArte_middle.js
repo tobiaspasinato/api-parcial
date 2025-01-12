@@ -31,6 +31,18 @@ const comprobarID = function (req, res, next) {
     }
 };
 
+const middle_museo_PUT = function (req, res, next) {
+    const id = parseInt(req.params.id, 10);
+    const nombre = req.body.nombre;
+    const anioDeConstruccion = Number(req.body.anioDeConstruccion);
+    const ubicacion = req.body.ubicacion;
+    if (!Number.isInteger(id) || typeof nombre !== "string" || !Number.isInteger(anioDeConstruccion) || typeof ubicacion !== "string") {
+        res.status(401).send("Error en los datos enviados");
+    } else {
+        next();
+    }
+};
+
 module.exports = {
     middle_POST,
     middle_PUT,
